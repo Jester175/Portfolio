@@ -1,4 +1,1 @@
-Personal works:
-Landing-page - the first layout project
-
-New ones will be added soon....
+Landing-page website using custom elements and various libraries
