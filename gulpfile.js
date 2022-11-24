@@ -12,14 +12,14 @@ const notify = require("gulp-notify");
 const unlify = require("gulp-uglify-es").default;
 
 const fonts = () => {
-  return src("src/font/**").pipe(dest("dist/font"));
+  return src("src/font/**").pipe(dest("docs/font"));
 };
 const libsJs = () => {
-  return src("src/js/libs/**/*.js").pipe(dest("dist/js/libs"));
+  return src("src/js/libs/**/*.js").pipe(dest("docs/js/libs"));
 };
 
 const clean = () => {
-  return del(["dist"]);
+  return del(["docs"]);
 };
 
 const htmlMinify = () => {
@@ -29,7 +29,7 @@ const htmlMinify = () => {
         collapseWhitespace: true,
       })
     )
-    .pipe(dest("dist"))
+    .pipe(dest("docs"))
     .pipe(browserSync.stream());
 };
 
@@ -43,14 +43,14 @@ const images = () => {
     "src/images/svg/**/*.svg",
   ])
     .pipe(image())
-    .pipe(dest("dist/images"))
+    .pipe(dest("docs/images"))
     .pipe(browserSync.stream());
 };
 
 const watchFiles = () => {
   browserSync.init({
     server: {
-      baseDir: "dist",
+      baseDir: "docs",
     },
   });
 };
@@ -69,7 +69,7 @@ const scssCompiler = () => {
         level: 2,
       })
     )
-    .pipe(dest("dist/css/main"))
+    .pipe(dest("docs/css/main"))
     .pipe(browserSync.stream());
   product = src("src/css/product/**/*.scss")
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
@@ -84,7 +84,7 @@ const scssCompiler = () => {
         level: 2,
       })
     )
-    .pipe(dest("dist/css/product"))
+    .pipe(dest("docs/css/product"))
     .pipe(browserSync.stream());
   catalog = src("src/css/catalog/**/*.scss")
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
@@ -99,7 +99,7 @@ const scssCompiler = () => {
         level: 2,
       })
     )
-    .pipe(dest("dist/css/catalog"))
+    .pipe(dest("docs/css/catalog"))
     .pipe(browserSync.stream());
   return main, catalog, product;
 };
@@ -116,7 +116,7 @@ const scripts = () => {
         toplevel: true,
       }).on("error", notify.onError())
     )
-    .pipe(dest("dist/js/product"))
+    .pipe(dest("docs/js/product"))
     .pipe(browserSync.stream());
   components = src("src/js/components/**/*.js")
     .pipe(
@@ -129,7 +129,7 @@ const scripts = () => {
         toplevel: true,
       }).on("error", notify.onError())
     )
-    .pipe(dest("dist/js/components"))
+    .pipe(dest("docs/js/components"))
     .pipe(browserSync.stream());
   main = src("src/js/main/**/*.js")
     .pipe(
@@ -142,7 +142,7 @@ const scripts = () => {
         toplevel: true,
       }).on("error", notify.onError())
     )
-    .pipe(dest("dist/js/main"))
+    .pipe(dest("docs/js/main"))
     .pipe(browserSync.stream());
   catalog = src("src/js/catalog/**/*.js")
     .pipe(
@@ -155,7 +155,7 @@ const scripts = () => {
         toplevel: true,
       }).on("error", notify.onError())
     )
-    .pipe(dest("dist/js/catalog"))
+    .pipe(dest("docs/js/catalog"))
     .pipe(browserSync.stream());
   return main, catalog,components,product;
 };
@@ -172,7 +172,7 @@ const styles = () => {
         level: 2,
       })
     )
-    .pipe(dest("dist/css/customs"))
+    .pipe(dest("docs/css/customs"))
     .pipe(browserSync.stream());
 };
 

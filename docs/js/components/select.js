@@ -1,12 +1,1 @@
-//Selects
-const select1 = document.querySelector("#selectCustom");
-const choices1 = new Choices(select1, {
-  searchEnabled: false,
-  itemSelectText: "",
-});
-
-const select2 = document.querySelector("#select2");
-const choices2 = new Choices(select2, {
-  searchEnabled: false,
-  itemSelectText: "",
-});
+"use strict";var e=document.querySelector("#selectCustom"),t=(new Choices(e,{searchEnabled:!1,itemSelectText:""}),document.querySelector("#select2"));new Choices(t,{searchEnabled:!1,itemSelectText:""});

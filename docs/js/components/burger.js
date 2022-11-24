@@ -1,16 +1,1 @@
-//Burger
-const btnBurger = document.querySelector(".burger");
-const burgerMenuExit = document.querySelector(".bottom__list-exit");
-const menuListTop = document.querySelector(".top__list");
-const burgerMenu = document.querySelector(".bottom__wrapper");
-
-btnBurger.addEventListener("click", () => {
-  burgerMenuExit.classList.add("burger-exit--active");
-  burgerMenu.classList.add("burger--active");
-  menuListTop.classList.add("top__list--active");
-  burgerMenuExit.addEventListener("click", () => {
-    burgerMenuExit.classList.remove("burger-exit--active");
-    burgerMenu.classList.remove("burger--active");
-    menuListTop.classList.remove("top__list--active");
-  });
-});
+"use strict";var e=document.querySelector(".burger"),t=document.querySelector(".bottom__list-exit"),c=document.querySelector(".top__list"),r=document.querySelector(".bottom__wrapper");e.addEventListener("click",(function(){t.classList.add("burger-exit--active"),r.classList.add("burger--active"),c.classList.add("top__list--active"),t.addEventListener("click",(function(){t.classList.remove("burger-exit--active"),r.classList.remove("burger--active"),c.classList.remove("top__list--active")}))}));
