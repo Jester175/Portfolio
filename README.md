@@ -1,4 +1,6 @@
 Personal works:
-Landing-page - the first layout project
+Landing-page,
+Furniture-store
+CRM,
 
 New ones will be added soon....
