@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clients</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/client.css" />
+    <script src="../js/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__wrapper flex">
+        <a href="#" class="logo">
+          <img src="../img/logo.svg" alt="Логотип" class="logo__img" />
+        </a>
+        <input type="text" class="search__panel" placeholder="Введите запрос" />
+      </div>
+    </header>
+    <main>
+      <section class="clients">
+        <div class="container clients-container">
+          <h1 class="clients__title">Клиенты</h1>
+          <table class="clients__table">
+            <thead>
+              <tr>
+                <th id="id" class="id sort">
+                  <button class="id__btn btn btn-reset">
+                    ID
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="arrow arrow-id"
+                    >
+                      <path
+                        d="M2 6L2.705 6.705L5.5 3.915L5.5 10L6.5 10L6.5 3.915L9.29 6.71L10 6L6 2L2 6Z"
+                        fill="#9873FF"
+                      />
+                    </svg>
+                  </button>
+                </th>
+                <th id="fullname" class="fullname sort">
+                  <button class="fullname__btn btn btn-reset">
+                    Фамилия Имя Отчество
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="arrow arrow-fullname"
+                    >
+                      <g clip-path="url(#clip0_121_1978)">
+                        <path
+                          d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                          fill="#9873FF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_121_1978">
+                          <rect width="12" height="12" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span class="letters">A-Я</span>
+                  </button>
+                </th>
+                <th id="createData" class="createData sort">
+                  <button class="createData__btn btn btn-reset">
+                    Дата и время создания
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="arrow arrow-createData"
+                    >
+                      <g clip-path="url(#clip0_121_1978)">
+                        <path
+                          d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                          fill="#9873FF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_121_1978">
+                          <rect width="12" height="12" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </th>
+                <th id="lastChange" class="lastChange sort">
+                  <button class="lastChange__btn btn btn-reset">
+                    Последние изменения
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="arrow arrow-lastChange"
+                    >
+                      <g clip-path="url(#clip0_121_1978)">
+                        <path
+                          d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z"
+                          fill="#9873FF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_121_1978">
+                          <rect width="12" height="12" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                </th>
+                <th id="contacts" class="contacts">
+                  <button class="contacts__btn btn btn-reset">
+                    Контакты
+                  </button>
+                </th>
+                <th id="actions" class="actions">
+                  <button class="actions__btn btn btn-reset">Действия</button>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+          </table>
+          <button class="btn-reset clients__btn">
+            <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" fill="#9873FF"/>
+              </svg>
+            Добавить клиента</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
