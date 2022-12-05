@@ -1,1 +1,0 @@
-"use strict";var e=document.querySelector("#selectCustom"),t=(new Choices(e,{searchEnabled:!1,itemSelectText:""}),document.querySelector("#select2"));new Choices(t,{searchEnabled:!1,itemSelectText:""});
